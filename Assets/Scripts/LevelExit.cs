@@ -58,6 +58,14 @@ public class LevelExit : MonoBehaviour
 
     void LoadNextLevel()
     {
+        PlayerPrefs.DeleteKey("SavedScene");
+        PlayerPrefs.DeleteKey("PlayerX");
+        PlayerPrefs.DeleteKey("PlayerY");
+        PlayerPrefs.DeleteKey("PlayerZ");
+        PlayerPrefs.Save();
+        Debug.Log("Cleared save data before loading next level");
+
+
         AudioManager.instance.PlayLevelExit();
         StartCoroutine(WaitForLevelExitAudio());
     }
