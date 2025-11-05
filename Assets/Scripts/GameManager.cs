@@ -36,32 +36,54 @@ public class GameManager : MonoBehaviour
         player1 = GameObject.FindWithTag("Player1");
         player2 = GameObject.FindWithTag("Player2");
 
-        // Cập nhật UI Player1
-        player1ScoreText.text = "Player 1: " + player1Score;
+        // ✅ Kiểm tra UI Text có tồn tại không trước khi cập nhật
+        if (player1ScoreText != null)
+        {
+            player1ScoreText.text = "Player 1: " + player1Score;
+        }
+        
         if (player1 != null)
         {
             PlayerHealth player1Health = player1.GetComponent<PlayerHealth>();
-            player1HealthText.text = "HP: " + player1Health.Health;
-            player1HealthText.gameObject.SetActive(true);
+            if (player1HealthText != null && player1Health != null)
+            {
+                player1HealthText.text = "HP: " + player1Health.Health;
+                player1HealthText.gameObject.SetActive(true);
+            }
         }
         else
         {
-            player1HealthText.gameObject.SetActive(false);
+            if (player1HealthText != null)
+            {
+                player1HealthText.gameObject.SetActive(false);
+            }
         }
 
         if (player2 != null)
         {
-            player2ScoreText.text = "Player 2: " + player2Score;
-            player2ScoreText.gameObject.SetActive(true);
+            if (player2ScoreText != null)
+            {
+                player2ScoreText.text = "Player 2: " + player2Score;
+                player2ScoreText.gameObject.SetActive(true);
+            }
 
             PlayerHealth player2Health = player2.GetComponent<PlayerHealth>();
-            player2HealthText.text = "HP: " + player2Health.Health;
-            player2HealthText.gameObject.SetActive(true);
+            if (player2HealthText != null && player2Health != null)
+            {
+                player2HealthText.text = "HP: " + player2Health.Health;
+                player2HealthText.gameObject.SetActive(true);
+            }
         }
         else
         {
-            player2ScoreText.gameObject.SetActive(false);
-            player2HealthText.gameObject.SetActive(false);
+            if (player2ScoreText != null)
+            {
+                player2ScoreText.gameObject.SetActive(false);
+            }
+            if (player2HealthText != null)
+            {
+                player2HealthText.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -70,12 +92,18 @@ public class GameManager : MonoBehaviour
         if (player.CompareTag("Player1"))
         {
             player1Score += points;
-            player1ScoreText.text = "Player 1: " + player1Score;
+            if (player1ScoreText != null)
+            {
+                player1ScoreText.text = "Player 1: " + player1Score;
+            }
         }
         else if (player.CompareTag("Player2"))
         {
             player2Score += points;
-            player2ScoreText.text = "Player 2: " + player2Score;
+            if (player2ScoreText != null)
+            {
+                player2ScoreText.text = "Player 2: " + player2Score;
+            }
         }
     }
 }
