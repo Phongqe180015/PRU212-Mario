@@ -2,8 +2,27 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Ground
+  - Player1
+  - Player2
+  - Platform
+  - LuckyBlock
+  - Brick
+  - Enemy
+  - Weak Point
+  - GameManager
+  - Player1Foot
+  - Player2Foot
+  - KillZone
+  - Bullet
+  - BreakPoint
+  - Fire
+  - Boss
+  - BreakableBlock
+  - BossKiller
+  - deadzone
   layers:
   - Default
   - TransparentFX
@@ -11,19 +30,19 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Brick
+  - Player1
+  - Player2
+  - Platform
+  - LuckyBlock
+  - Ground
+  - Enemies
+  - Bullet
+  - BreakableBlock
+  - Fire
+  - IgnoreCollisions
+  - Boss
+  - Brigde
   - 
   - 
   - 
@@ -41,36 +60,35 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2443395317
+    locked: 0
+  - name: Platform
+    uniqueID: 3358614663
+    locked: 0
+  - name: Brick
+    uniqueID: 2698684511
+    locked: 0
+  - name: Ground
+    uniqueID: 1494242841
+    locked: 0
+  - name: Player1
+    uniqueID: 26534979
+    locked: 0
+  - name: Player2
+    uniqueID: 4032314217
+    locked: 0
+  - name: LuckyBlock
+    uniqueID: 1525912041
+    locked: 0
+  - name: Enemies
+    uniqueID: 3105845725
+    locked: 0
+  - name: Bullet
+    uniqueID: 1374843951
+    locked: 0
+  - name: Pipe
+    uniqueID: 787603305
+    locked: 0
   m_RenderingLayers:
   - Default
-  - Light Layer 1
-  - Light Layer 2
-  - Light Layer 3
-  - Light Layer 4
-  - Light Layer 5
-  - Light Layer 6
-  - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
