@@ -1,2 +1,43 @@
-m_EditorVersion: 6000.0.32f1
-m_EditorVersionWithRevision: 6000.0.32f1 (b2e806cf271c)
+dotnet ef migrations add Initdatabase
+dotnet ef database update
+
+
+add-migration "InitialDB"
+update-database
+
+
+File Create : 
+
+Fruits.IsDeleted = false;
+
+
+Deleted : 
+xóa về true
+if (student != null) {
+student. IsActive = true;
+context.Student. Update(student);
+}
+
+	
+Index: 
+chức năng search
+
+
+
+<div>
+    <form action="/fruits" data-enhance date-permanent>
+        <input type="search" name="TitleFilter" placeholder="Search by name" />
+        <input type="submit" value="Search" />
+    </form>
+</div>
+
+
+
+<QuickGrid Class="table" Items="FilterFruits">
+
+
+[SupplyParameterFromQuery]
+private string? TitleFilter { get; set; }
+
+private IQueryable<Fruits> FilterFruits =>
+context.Fruits.Where(s => s.Name!.Contains(TitleFilter ?? string.Empty));	
